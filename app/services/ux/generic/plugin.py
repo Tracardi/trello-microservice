@@ -30,7 +30,6 @@ class GenericUixPlugin(ActionRunner):
             "tag": "script",
             "props": {"src": f"{self.config.uix_source}"}
         })
-        print(self.ux)
         return Result(port="response", value=payload)
 
 
