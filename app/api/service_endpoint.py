@@ -94,7 +94,7 @@ async def get_service_resource(service_id: str):
 
     service = repo.get_service(service_id)
     if service is not None and isinstance(service.resource, BaseModel):
-        return service.resource.dict(exclude={"validator": ...})
+        return service.resource.model_dump(mode="json", exclude={"validator": ...})
     return None
 
 
